@@ -115,7 +115,10 @@ export default function RouteNavigator({
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     const target = routes.find((r) => r.id === id)?.el
     if (target) {
-      target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" })
+      target.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "start",
+      })
     }
   }
 
@@ -135,7 +138,7 @@ export default function RouteNavigator({
       )}
       aria-label="Route navigation"
     >
-      <div className="flex items-center gap-2">
+      <div className="flex flex-col md:flex-row items-center gap-2">
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
             <Button variant="outline" className="justify-between w-full md:w-auto bg-transparent">
@@ -165,30 +168,31 @@ export default function RouteNavigator({
             </Command>
           </PopoverContent>
         </Popover>
+        <div>
+          {enableFilter && (
+            <Button
+              type="button"
+              variant={filterOn ? "default" : "secondary"}
+              disabled={!selectedId}
+              onClick={() => setFilterOn((s) => !s)}
+              className="whitespace-nowrap"
+            >
+              <Filter className="mr-2 h-4 w-4" />
+              {filterOn ? "Showing 1 route" : "Show only selected"}
+            </Button>
+          )}
 
-        {enableFilter && (
           <Button
             type="button"
-            variant={filterOn ? "default" : "secondary"}
-            disabled={!selectedId}
-            onClick={() => setFilterOn((s) => !s)}
-            className="whitespace-nowrap"
+            variant="ghost"
+            onClick={onClear}
+            className="ml-auto"
+            aria-label="Clear selection and filter"
           >
-            <Filter className="mr-2 h-4 w-4" />
-            {filterOn ? "Showing 1 route" : "Show only selected"}
+            <X className="mr-2 h-4 w-4" />
+            Clear
           </Button>
-        )}
-
-        <Button
-          type="button"
-          variant="ghost"
-          onClick={onClear}
-          className="ml-auto"
-          aria-label="Clear selection and filter"
-        >
-          <X className="mr-2 h-4 w-4" />
-          Clear
-        </Button>
+        </div>
       </div>
     </div>
   )

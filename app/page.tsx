@@ -15,6 +15,7 @@ import ThemeToggle from "@/components/theme-toggle"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import RouteNavigator from "@/components/route-navigator"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 
 type Stand = {
   name: string
@@ -77,14 +78,41 @@ export default function HomePage() {
             <a href="/" className="font-semibold text-blue-600 transition-colors hover:text-blue-700">
               allkeralabustimings
             </a>
-            <div className="flex items-center gap-3">
+
+            {/* Desktop actions */}
+            <div className="hidden sm:flex items-center gap-3">
               <Link href="/generator" aria-label="Open Markdown Generator">
                 <Button variant="outline" size="sm">
                   .md Generator
                 </Button>
               </Link>
-              <span className="text-xs text-muted-foreground">Open-source • Kerala Bus Timings</span>
+              <span className="hidden md:inline text-xs text-muted-foreground">Open-source • Kerala Bus Timings</span>
               <ThemeToggle />
+            </div>
+
+            {/* Mobile menu */}
+            <div className="sm:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="outline" size="sm" aria-label="Open menu">
+                    Menu
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-80">
+                  <SheetHeader>
+                    <SheetTitle>Menu</SheetTitle>
+                  </SheetHeader>
+                  <div className="mt-4 flex flex-col gap-2">
+                    <Link href="/generator" aria-label="Open Markdown Generator">
+                      <Button variant="ghost" className="w-full justify-start">
+                        .md Generator
+                      </Button>
+                    </Link>
+                    <div className="border-t my-2" />
+                    <ThemeToggle />
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
         </div>
