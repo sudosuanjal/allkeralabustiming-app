@@ -14,6 +14,7 @@ import Reveal from "@/components/reveal"
 import ThemeToggle from "@/components/theme-toggle"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import RouteNavigator from "@/components/route-navigator"
 
 type Stand = {
   name: string
@@ -175,8 +176,15 @@ export default function HomePage() {
         )}
 
         {md && selectedStand && (
+          <div className="mb-4">
+            <RouteNavigator enableFilter className="shadow-sm" />
+          </div>
+        )}
+
+        {md && selectedStand && (
           <Reveal
             as="article"
+            id="md-viewer"
             delay={75}
             className={cn(
               "prose prose-sm max-w-none",

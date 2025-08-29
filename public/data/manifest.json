@@ -10,7 +10,7 @@
     },
     {
       "name": "pathanamthitta",
-      "stands": [{ "name": "athikayam", "path": "/data/pathanamthitta/athikayam.md" }]
+      "stands": [{ "name": "athikayam", "path": "/data/pathanamthitta/athikayam.md" },{ "name": "chumma", "path": "/data/pathanamthitta/chumma.md" }]
     }
   ]
 }
