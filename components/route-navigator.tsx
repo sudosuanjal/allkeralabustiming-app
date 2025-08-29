@@ -4,7 +4,7 @@ import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command"
-import { ChevronDown, Filter, X } from "lucide-react"
+import { ChevronDown, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 type RouteItem = {
@@ -26,7 +26,7 @@ type Props = {
 /**
  * RouteNavigator
  * - Scans rendered markdown inside containerId and finds headings (h2, fallback h3).
- * - Offers a searchable dropdown to jump to a route or filter to a single route.
+ * - Offers a searchable dropdown to jump to a route and now auto-filters to that route on selection.
  * - Works without changing your markdown structure.
  */
 export default function RouteNavigator({
@@ -109,9 +109,9 @@ export default function RouteNavigator({
 
   const onSelect = (id: string) => {
     setSelectedId(id)
+    if (enableFilter) setFilterOn(true)
     setOpen(false)
 
-    // Prefer smooth scrolling if user allows motion
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     const target = routes.find((r) => r.id === id)?.el
     if (target) {
@@ -169,19 +169,7 @@ export default function RouteNavigator({
           </PopoverContent>
         </Popover>
         <div>
-          {enableFilter && (
-            <Button
-              type="button"
-              variant={filterOn ? "default" : "secondary"}
-              disabled={!selectedId}
-              onClick={() => setFilterOn((s) => !s)}
-              className="whitespace-nowrap"
-            >
-              <Filter className="mr-2 h-4 w-4" />
-              {filterOn ? "Showing 1 route" : "Show only selected"}
-            </Button>
-          )}
-
+          {/* Removed manual filter toggle button; selection now auto-filters */}
           <Button
             type="button"
             variant="ghost"
