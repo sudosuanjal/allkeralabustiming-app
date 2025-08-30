@@ -16,6 +16,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import RouteNavigator from "@/components/route-navigator"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { Github, Rocket } from "lucide-react"
 
 type Stand = {
   name: string
@@ -41,6 +42,69 @@ const mdFetcher = async (url: string) => {
   const res = await fetch(url)
   if (!res.ok) throw new Error(`Failed to fetch ${url}`)
   return res.text()
+}
+
+function formatCompact(n?: number) {
+  if (typeof n !== "number" || Number.isNaN(n)) return ""
+  return new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(n)
+}
+
+function GitHubStarButton({
+  variant = "outline",
+  fullWidth = false,
+  className,
+}: {
+  variant?: string
+  fullWidth?: boolean
+  className?: string
+}) {
+  const { data } = useSWR(
+    "https://api.github.com/repos/sudosuanjal/allkeralabustiming-app",
+    (u: string) => fetch(u).then((r) => r.json()),
+    { revalidateOnFocus: false, refreshInterval: 10 * 60 * 1000 },
+  )
+  const stars = (data?.stargazers_count as number | undefined) ?? undefined
+  return (
+    <Button asChild variant={variant as any} size="sm" className={cn(fullWidth && "w-full justify-start", className)}>
+      <a
+        href="https://github.com/sudosuanjal/allkeralabustiming-app"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Star the GitHub repository"
+      >
+        <Github className="mr-1 h-4 w-4" />
+        Star{stars !== undefined ? ` ${formatCompact(stars)}` : ""}
+      </a>
+    </Button>
+  )
+}
+
+function ProductHuntButton({
+  variant = "outline",
+  fullWidth = false,
+  className,
+}: {
+  variant?: string
+  fullWidth?: boolean
+  className?: string
+}) {
+  const upvotesEnv =
+    typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_PH_UPVOTES as string | undefined) : undefined
+  const upvotes = upvotesEnv ? Number(upvotesEnv) : undefined
+  const label = upvotes ? formatCompact(upvotes) : "Soon"
+  return (
+    <Button asChild variant={variant as any} size="sm" className={cn(fullWidth && "w-full justify-start", className)}>
+      <a
+        href="https://www.producthunt.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Product Hunt upvotes"
+      >
+        <Rocket className="mr-1 h-4 w-4" />
+        PH {label}
+      </a>
+    </Button>
+  )
 }
 
 export default function HomePage() {
@@ -72,11 +136,17 @@ export default function HomePage() {
   return (
     <main className="min-h-dvh bg-background text-foreground">
       {/* Header */}
-      <header className="sticky top-0 z-10 border-b bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 animate-in fade-in-0 slide-in-from-top-2 duration-300">
+      <header className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 animate-in fade-in-0 slide-in-from-top-2 duration-300">
         <div className="mx-auto w-full max-w-3xl px-4 py-3">
           <div className="flex items-center justify-between">
-            <a href="/" className="font-semibold text-blue-600 transition-colors hover:text-blue-700">
-              allkeralabustimings
+            {/* Project logo on desktop, keep text on mobile for space */}
+            <a href="/" className="flex items-center font-semibold text-blue-600 transition-colors hover:text-blue-700">
+              <img
+                src="/images/logo.png"
+                alt="All Kerala Bus Timings logo"
+                className="mr-2 hidden h-10 w-auto md:h-10 sm:block rounded-lg"
+              />
+              <span className="inline sm:sr-only">allkeralabustimings</span>
             </a>
 
             {/* Desktop actions */}
@@ -86,8 +156,12 @@ export default function HomePage() {
                   .md Generator
                 </Button>
               </Link>
-              <span className="hidden md:inline text-xs text-muted-foreground">Open-source • Kerala Bus Timings</span>
-              <ThemeToggle />
+              <GitHubStarButton />
+              <ProductHuntButton />
+              {/* Add subtle padding/border so ThemeToggle isn't tight to the edge */}
+              <div className="ml-1 sm:ml-2 rounded-md border p-1">
+                <ThemeToggle />
+              </div>
             </div>
 
             {/* Mobile menu */}
@@ -108,8 +182,12 @@ export default function HomePage() {
                         .md Generator
                       </Button>
                     </Link>
+                    <GitHubStarButton variant="ghost" fullWidth />
+                    <ProductHuntButton variant="ghost" fullWidth />
                     <div className="border-t my-2" />
-                    <ThemeToggle />
+                    <div className="rounded-md border p-2 w-fit">
+                      <ThemeToggle />
+                    </div>
                   </div>
                 </SheetContent>
               </Sheet>
@@ -205,7 +283,7 @@ export default function HomePage() {
 
         {md && selectedStand && (
           <div className="mb-4">
-            <RouteNavigator enableFilter className="shadow-sm" />
+            <RouteNavigator enableFilter className="shadow-sm z-40" />
           </div>
         )}
 

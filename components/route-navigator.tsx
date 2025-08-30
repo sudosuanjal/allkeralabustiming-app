@@ -133,7 +133,7 @@ export default function RouteNavigator({
     <div
       className={cn(
         "w-full bg-background/60 backdrop-blur supports-[backdrop-filter]:bg-background/60 border rounded-md p-2 md:p-3",
-        "sticky top-2 z-20",
+        "sticky top-16 md:top-20 z-20",
         className,
       )}
       aria-label="Route navigation"
