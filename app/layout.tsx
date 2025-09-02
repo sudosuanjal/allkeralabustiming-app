@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "allkeralabustimings",
     images: [
       {
-        url: "/logo.png",
+        url: "/images/logo.png",
         width: 1200,
         height: 630,
         alt: "allkeralabustimings",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "allkeralabustimings",
     description:
       "Kerala bus stand timings from community-maintained Markdown files.",
-    images: ["/logo.png"],
+    images: ["/images/logo.png"],
   },
   robots: {
     index: true,
