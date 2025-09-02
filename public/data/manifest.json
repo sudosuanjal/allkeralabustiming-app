@@ -2,15 +2,43 @@
   "districts": [
     {
       "name": "idukki",
-      "stands": [{ "name": "checkpost", "path": "/data/idukki/checkpost.md" }]
+      "stands": [
+        {
+          "name": "checkpost",
+          "path": "/data/idukki/checkpost.md"
+        }
+      ]
     },
     {
       "name": "kozhikode",
-      "stands": [{ "name": "nit", "path": "/data/kozhikode/nit.md" }]
+      "stands": [
+        {
+          "name": "nit",
+          "path": "/data/kozhikode/nit.md"
+        }
+      ]
     },
     {
       "name": "pathanamthitta",
-      "stands": [{ "name": "athikayam", "path": "/data/pathanamthitta/athikayam.md" },{ "name": "chumma", "path": "/data/pathanamthitta/chumma.md" }]
+      "stands": [
+        {
+          "name": "athikayam",
+          "path": "/data/pathanamthitta/athikayam.md"
+        },
+        {
+          "name": "chumma",
+          "path": "/data/pathanamthitta/chumma.md"
+        }
+      ]
+    },
+    {
+      "name": "wayanad",
+      "stands": [
+        {
+          "name": "mananthavady",
+          "path": "/data/wayanad/mananthavady.md"
+        }
+      ]
     }
   ]
 }
