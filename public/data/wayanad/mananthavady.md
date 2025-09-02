@@ -105,3 +105,12 @@
 | 04:00 PM | KSRTC LS         |
 | 05:10 PM | KSRTC FP [KTDY]] |
 | 05:30 PM | KSRTC LS         |
+
+## Mananthavady -> Mysore
+
+| Time     | Bus      |
+| -------- | -------- |
+| 07:30 AM | KSRTC FP |
+| 90:30 AM | KSRTC FP |
+| 11:30 AM | KSRTC FP |
+| 03:00 PM | KSRTC FP |
