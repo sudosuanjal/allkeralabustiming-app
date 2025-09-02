@@ -1,42 +1,11 @@
 {
   "districts": [
     {
-      "name": "idukki",
-      "stands": [
-        {
-          "name": "checkpost",
-          "path": "/data/idukki/checkpost.md"
-        }
-      ]
-    },
-    {
       "name": "kannur",
       "stands": [
         {
           "name": "adakkathode",
           "path": "/data/kannur/adakkathode.md"
-        }
-      ]
-    },
-    {
-      "name": "kozhikode",
-      "stands": [
-        {
-          "name": "nit",
-          "path": "/data/kozhikode/nit.md"
-        }
-      ]
-    },
-    {
-      "name": "pathanamthitta",
-      "stands": [
-        {
-          "name": "athikayam",
-          "path": "/data/pathanamthitta/athikayam.md"
-        },
-        {
-          "name": "chumma",
-          "path": "/data/pathanamthitta/chumma.md"
         }
       ]
     },
