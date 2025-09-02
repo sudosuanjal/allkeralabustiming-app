@@ -10,6 +10,15 @@
       ]
     },
     {
+      "name": "kannur",
+      "stands": [
+        {
+          "name": "adakkathode",
+          "path": "/data/kannur/adakkathode.md"
+        }
+      ]
+    },
+    {
       "name": "kozhikode",
       "stands": [
         {
