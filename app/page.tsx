@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import useSWR from "swr"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
@@ -112,6 +112,8 @@ export default function HomePage() {
   const [district, setDistrict] = useState<string>("")
   const [stand, setStand] = useState<string>("")
   const [query, setQuery] = useState<string>("")
+  const [standOpen, setStandOpen] = useState(false)
+  const [standFocused, setStandFocused] = useState(false)
 
   const selectedDistrict = useMemo(() => {
     if (!manifest) return undefined
@@ -130,6 +132,10 @@ export default function HomePage() {
     if (!selectedDistrict) return undefined
     return selectedDistrict.stands.find((s) => s.name === stand)
   }, [selectedDistrict, stand])
+
+  useEffect(() => {
+    if (!district && standOpen) setStandOpen(false)
+  }, [district])
 
   const { data: md, isLoading: mdLoading } = useSWR(() => (selectedStand?.path ? selectedStand.path : null), mdFetcher)
 
@@ -235,14 +241,62 @@ export default function HomePage() {
                 <div className="space-y-1.5">
                   <Label htmlFor="stand">Bus Stand</Label>
                   <div className="flex flex-col gap-2">
-                    <Input
-                      id="stand"
-                      placeholder={district ? "Search bus stand…" : "Select a district first"}
+                    <div className="relative">
+                      <Input
+                        id="stand"
+                        placeholder={district ? "Search bus stand…" : "Select a district first"}
+                        disabled={!district}
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        onFocus={() => district && setStandFocused(true)}
+                        onBlur={() => {
+                          setTimeout(() => setStandFocused(false), 100)
+                        }}
+                        aria-autocomplete="list"
+                        aria-expanded={Boolean(district && standFocused)}
+                        aria-controls="stand-results"
+                      />
+                      {district && standFocused && (
+                        <div
+                          id="stand-results"
+                          className="absolute left-0 right-0 top-full z-30 mt-1 max-h-60 overflow-auto rounded-md border bg-background shadow-md"
+                          role="listbox"
+                          aria-label="Filtered bus stands"
+                        >
+                          {filteredStands.length === 0 ? (
+                            <div className="px-3 py-2 text-sm text-muted-foreground">No stands found</div>
+                          ) : (
+                            filteredStands.slice(0, 50).map((s) => (
+                              <button
+                                key={s.name}
+                                type="button"
+                                role="option"
+                                className="w-full px-3 py-2 text-left text-sm hover:bg-muted focus:bg-muted"
+                                onMouseDown={(e) => e.preventDefault()}
+                                onClick={() => {
+                                  setStand(s.name)
+                                  setQuery("")
+                                  setStandFocused(false)
+                                }}
+                              >
+                                {s.name}
+                              </button>
+                            ))
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    <Select
+                      value={stand}
+                      onValueChange={(v) => {
+                        setStand(v)
+                        setStandOpen(false)
+                      }}
                       disabled={!district}
-                      value={query}
-                      onChange={(e) => setQuery(e.target.value)}
-                    />
-                    <Select value={stand} onValueChange={(v) => setStand(v)} disabled={!district}>
+                      open={standOpen}
+                      onOpenChange={setStandOpen}
+                    >
                       <SelectTrigger aria-label="Select bus stand">
                         <SelectValue placeholder={district ? "Choose a bus stand" : "—"} />
                       </SelectTrigger>
