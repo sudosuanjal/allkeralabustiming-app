@@ -114,3 +114,120 @@
 | 90:30 AM | KSRTC FP |
 | 11:30 AM | KSRTC FP |
 | 03:00 PM | KSRTC FP |
+
+## Mananthavady -> Kozhikode
+
+| Time     | Bus             |
+| -------- | --------------- |
+| 04:30 AM | KSRTC FP MCH    |
+| 05:00 AM | KSRTC TT MCH    |
+| 05:10 AM | KSRTC TT [PDT]  |
+| O5:30 AM | KSRTC TT        |
+| 05:45 AM | KSRTC TT [VLD]  |
+| 06:00 AM | KSRTC TT        |
+| 06:20 AM | KSRTC TT        |
+| 06:40 AM | KSRTC TT        |
+| 07:00 AM | KSRTC TT        |
+| 07:25 AM | KSRTC TT MCH    |
+| 07:45 AM | KSRTC TT        |
+| 08:15 AM | KSRTC TT        |
+| 08:30 AM | KSRTC TT [PDT]M |
+| 09:00 AM | KSRTC TT        |
+| 09:40 AM | KSRTC TT        |
+| 10:00 AM | KSRTC TT        |
+| 10:20 AM | KSRTC TT        |
+| 10:40 AM | KSRTC TT        |
+| 11:00 AM | KSRTC TT        |
+| 11:20 AM | KSRTC TT        |
+| 11:40 AM | KSRTC TT        |
+| 12:00 PM | KSRTC TT        |
+| 12:20 PM | KSRTC TT        |
+| 12:40 PM | KSRTC TT        |
+| 01:00 PM | KSRTC TT        |
+| 01:20 PM | KSRTC TT        |
+| 01:40 PM | KSRTC TT        |
+| 02:00 PM | KSRTC TT        |
+| 02:20 PM | KSRTC TT        |
+| 02:40 PM | KSRTC TT        |
+| 03:00 PM | KSRTC TT        |
+| 03:20 PM | KSRTC TT        |
+| 03:40 PM | KSRTC TT        |
+| 04:00 PM | KSRTC TT        |
+| 04:20 PM | KSRTC TT        |
+| 04:40 PM | KSRTC TT        |
+| 05:00 PM | KSRTC TT        |
+| 05:20 PM | KSRTC TT        |
+| 05:40 PM | KSRTC TT        |
+| 06:00 PM | KSRTC TT        |
+| 06:20 PM | KSRTC TT        |
+| 06:40 PM | KSRTC TT        |
+| 07:00 PM | KSRTC TT        |
+| 07:20 PM | KSRTC TT        |
+| 08:00 PM | KSRTC TT        |
+| 09:00 PM | KSRTC TT        |
+
+## Mananthavady -> Anappara
+
+| Time     | Bus   |
+| -------- | ----- |
+| 06:45 AM | KSRTC |
+| 07:25 AM | KSRTC |
+| 08:05 AM | KSRTC |
+| 08:50 AM | KSRTC |
+| 09:30 AM | KSRTC |
+| 10:30 AM | KSRTC |
+| 11:10 AM | KSRTC |
+| 12:00 PM | KSRTC |
+| 01:00 PM | KSRTC |
+| 01:40 PM | KSRTC |
+| 02:20 PM | KSRTC |
+| 03:00 PM | KSRTC |
+| 03:40 PM | KSRTC |
+| 04:20 PM | KSRTC |
+| 05:10 PM | KSRTC |
+| 05:50 PM | KSRTC |
+| 06:30 PM | KSRTC |
+
+## Mananthavady -> Bathery
+
+| Time     | Bus   |
+| -------- | ----- |
+| 06:00 AM | KSRTC |
+| 06:50 AM | KSRTC |
+| 07:15 AM | KSRTC |
+| 07:55 AM | KSRTC |
+| 08:20 AM | KSRTC |
+| 08:40 AM | KSRTC |
+| 09:40 AM | KSRTC |
+| 10:10 AM | KSRTC |
+| 10:55 AM | KSRTC |
+| 11:20 AM | KSRTC |
+| 12:00 PM | KSRTC |
+| 12:40 PM | KSRTC |
+| 01:45 PM | KSRTC |
+| 02:25 PM | KSRTC |
+| 02:55 PM | KSRTC |
+| 04:00 PM | KSRTC |
+| 04:10 PM | KSRTC |
+| 04:55 PM | KSRTC |
+| 05:40 PM | KSRTC |
+| 06:00 PM | KSRTC |
+| 06:10 PM | KSRTC |
+
+## Mananthavady -> CKLY [KPTA]
+
+| Time     | Bus   |
+| -------- | ----- |
+| 08:00 AM | KSRTC |
+| 05:05 PM | KSRTC |
+
+## Mananthavady -> Gramavandi
+
+| Time     | Bus   |
+| -------- | ----- |
+| 07:50 AM | KSRTC |
+| 09:20 AM | KSRTC |
+| 11:00 AM | KSRTC |
+| 12:45 PM | KSRTC |
+| 02:30 PM | KSRTC |
+| 04:30 PM | KSRTC |
