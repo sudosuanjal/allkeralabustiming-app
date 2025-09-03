@@ -302,3 +302,71 @@
 | 01:30 PM | KSRTC |
 | 03:25 PM | KSRTC |
 | 05:00 PM | KSRTC |
+
+## Mananthavady -> Kutta
+
+| Time     | Bus   |
+| -------- | ----- |
+| 06:00 AM | KSRTC |
+| 07:00 AM | KSRTC |
+| 08:00 AM | KSRTC |
+| 08:40 AM | KSRTC |
+| 09:10 AM | KSRTC |
+| 09:40 AM | KSRTC |
+| 10:10 AM | KSRTC |
+| 10:40 AM | KSRTC |
+| 11:20 AM | KSRTC |
+| 11:50 AM | KSRTC |
+| 12:20 PM | KSRTC |
+| 12:50 PM | KSRTC |
+| 01:40 PM | KSRTC |
+| 02:20 PM | KSRTC |
+| 03:00 PM | KSRTC |
+| 03:00 PM | KSRTC |
+| 04:20 PM | KSRTC |
+| 05:10 PM | KSRTC |
+| 05:40 PM | KSRTC |
+| 06:50 PM | KSRTC |
+
+## Mananthavady -> Kuttyadi
+
+| Time     | Bus          |
+| -------- | ------------ |
+| 05:00 AM | KSRTC [KKD]  |
+| 06:00 AM | KSRTC [KLDY] |
+| 06:20 AM | KSRTC        |
+| 07:00 AM | KSRTC        |
+| 07:30 AM | KSRTC        |
+| 08:10 AM | KSRTC [KKD]  |
+| 08:30 AM | KSRTC        |
+| 09:15 AM | KSRTC [KKD]  |
+| 10:00 AM | KSRTC [VDA]  |
+| 10:30 AM | KSRTC [NDPM] |
+| 11:05 AM | KSRTC [KKD]  |
+| 11:35 AM | KSRTC [VDA]  |
+| 12:00 PM | KSRTC        |
+| 12:15 PM | KSRTC [KKD]  |
+| 12:40 PM | KSRTC        |
+| 01:00 PM | KSRTC        |
+| 01:30 PM | KSRTC [VDA]  |
+| 02:10 PM | KSRTC        |
+| 02:50 PM | KSRTC [KKD]  |
+| 03:30 PM | KSRTC [KKD]  |
+| 04:00 PM | KSRTC [NDPM] |
+| 04:30 PM | KSRTC [VDA]  |
+| 05:00 PM | KSRTC [KKD]  |
+| 05:10 PM | KSRTC [TLY]  |
+| 05:40 PM | KSRTC [VDA]  |
+| 06:00 PM | KSRTC [PALA] |
+| 06:30 PM | KSRTC [VDA]  |
+| 07:00 PM | KSRTC [KKD]  |
+| 08:20 PM | KSRTC [PTA]  |
+| 09:00 PM | KSRTC [DLX]  |
+
+## Mananthavady -> Orapp
+
+| Time     | Bus   |
+| -------- | ----- |
+| 08:00 AM | KSRTC |
+| 02:30 PM | KSRTC |
+| 05:00 PM | KSRTC |
