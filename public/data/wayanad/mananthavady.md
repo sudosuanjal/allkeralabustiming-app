@@ -231,3 +231,74 @@
 | 12:45 PM | KSRTC |
 | 02:30 PM | KSRTC |
 | 04:30 PM | KSRTC |
+
+## Mananthavady -> Iritty
+
+| Time     | Bus           |
+| -------- | ------------- |
+| 06:00 AM | KSRTC         |
+| 06:20 AM | KSRTC [KGD]   |
+| 06:50 AM | KSRTC [BILL]  |
+| 07:30 AM | KSRTC         |
+| 08:25 AM | KSRTC [KHD]   |
+| 09:20 AM | KSRTC         |
+| 10:00 AM | KSRTC         |
+| 10:20 AM | KSRTC         |
+| 11:00 AM | KSRTC [KZPLY] |
+| 11:15 AM | KSRTC [KHD]   |
+| 11:50 AM | KSRTC         |
+| 12:10 PM | KSRTC [PNR]   |
+| 12:30 PM | KSRTC         |
+| 01:00 PM | KSRTC         |
+| 01:30 PM | KSRTC [BILL]  |
+| 02:00 PM | KSRTC [PNR]   |
+| 02:45 PM | KSRTC [BILL]  |
+| 03:00 PM | KSRTC         |
+| 03:25 PM | KSRTC [KNR]   |
+| 04:00 PM | KSRTC         |
+| 05:00 PM | KSRTC [KNR]   |
+| 05:40 PM | KSRTC         |
+| 06:25 PM | KSRTC [CBRY]  |
+
+## Mananthavady -> KLDY/PSRY
+
+| Time     | Bus          |
+| -------- | ------------ |
+| 07:00 AM | KSRTC        |
+| 07:30 AM | KSRTC        |
+| 07:45 AM | KSRTC [NVPA] |
+| 08:00 AM | KSRTC ORPE   |
+| 08:20 AM | KSRTC        |
+| 09:15 AM | KSRTC        |
+| 09:45 AM | KSRTC [NVPA] |
+| 10:20 AM | KSRTC        |
+| 11:00 AM | KSRTC        |
+| 12:10 PM | KSRTC        |
+| 12:45 PM | KSRTC [NVPA] |
+| 01:20 PM | KSRTC        |
+| 02:00 PM | KSRTC        |
+| 03:30 PM | KSRTC        |
+| 03:45 PM | KSRTC [NVPA] |
+| 04:40 PM | KSRTC        |
+| 05:20 PM | KSRTC        |
+| 05:40 PM | KSRTC [NVPA] |
+
+## Mananthavady -> Karimbil
+
+| Time     | Bus          |
+| -------- | ------------ |
+| 07:10 AM | KSRTC [VMDA] |
+| 07:40 AM | KSRTC [VMDA] |
+| 03:00 PM | KSRTC [VMDA] |
+
+## Mananthavady -> Kulathada
+
+| Time     | Bus   |
+| -------- | ----- |
+| 06:30 AM | KSRTC |
+| 08:00 AM | KSRTC |
+| 09:40 AM | KSRTC |
+| 11:25 AM | KSRTC |
+| 01:30 PM | KSRTC |
+| 03:25 PM | KSRTC |
+| 05:00 PM | KSRTC |
