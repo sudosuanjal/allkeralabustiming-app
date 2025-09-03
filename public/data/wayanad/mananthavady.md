@@ -370,3 +370,91 @@
 | 08:00 AM | KSRTC |
 | 02:30 PM | KSRTC |
 | 05:00 PM | KSRTC |
+
+## Mananthavady -> Panthipoyil
+
+| Time     | Bus   |
+| -------- | ----- |
+| 09:40 AM | KSRTC |
+| 12:25 PM | KSRTC |
+| 03:40 PM | KSRTC |
+| 07:30 PM | KSRTC |
+
+## Mananthavady -> Pulpally
+
+| Time     | Bus   |
+| -------- | ----- |
+| 06:40 AM | KSRTC |
+| 07:10 AM | KSRTC |
+| 07:50 AM | KSRTC |
+| 08:40 AM | KSRTC |
+| 10:00 AM | KSRTC |
+| 11:10 AM | KSRTC |
+| 11:35 AM | KSRTC |
+| 12:10 PM | KSRTC |
+| 01:00 PM | KSRTC |
+| 02:20 PM | KSRTC |
+| 02:35 PM | KSRTC |
+| 03:35 PM | KSRTC |
+| 04:00 PM | KSRTC |
+| 05:00 PM | KSRTC |
+| 05:30 PM | KSRTC |
+| 08:40 PM | KSRTC |
+
+## Mananthavady -> Thirunelli
+
+| Time     | Bus           |
+| -------- | ------------- |
+| 06:10 AM | KSRTC         |
+| 06:50 AM | KSRTC [PNVLY] |
+| 09:30 AM | KSRTC [PNVLY] |
+| 10:00 AM | KSRTC         |
+| 10:45 AM | KSRTC FP      |
+| 11:10 AM | KSRTC         |
+| 12:10 PM | KSRTC         |
+| 01:00 PM | KSRTC         |
+| 01:30 PM | KSRTC [PNVLY] |
+| 02:45 PM | KSRTC         |
+| 04:10 PM | KSRTC         |
+| 04:40 PM | KSRTC [PNVLY] |
+
+## Mananthavady -> Valad
+
+| Time     | Bus          |
+| -------- | ------------ |
+| 05:45 AM | KSRTC [KKD]  |
+| 06:00 AM | KSRTC        |
+| 06:30 AM | KSRTC        |
+| 07:00 AM | KSRTC [HS]   |
+| 07:30 AM | KSRTC [VRYL] |
+| 07:40 AM | KSRTC [HS]   |
+| 08:20 AM | KSRTC [HS]   |
+| 08:50 AM | KSRTC [HS]   |
+| 09:30 AM | KSRTC        |
+| 09:50 AM | KSRTC        |
+| 10:50 AM | KSRTC        |
+| 11:20 AM | KSRTC        |
+| 11:40 AM | KSRTC        |
+| 12:20 PM | KSRTC        |
+| 12:50 PM | KSRTC        |
+| 01:20 PM | KSRTC        |
+| 01:50 PM | KSRTC        |
+| 02:20 PM | KSRTC        |
+| 02:40 PM | KSRTC [HS]   |
+| 03:00 PM | KSRTC        |
+| 03:40 PM | KSRTC [HS]   |
+| 04:10 PM | KSRTC        |
+| 04:30 PM | KSRTC [VRYL] |
+| 04:40 PM | KSRTC        |
+| 05:10 PM | KSRTC [HS]   |
+| 05:30 PM | KSRTC        |
+| 06:00 PM | KSRTC        |
+| 07:30 PM | KSRTC [HS]   |
+
+## Mananthavady -> Wims
+
+| Time     | Bus   |
+| -------- | ----- |
+| 06:20 AM | KSRTC |
+| 11:20 AM | KSRTC |
+| 03:00 AM | KSRTC |
