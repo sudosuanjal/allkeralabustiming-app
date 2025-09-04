@@ -1,64 +1,81 @@
-# allkeralabustimings
+# 🚌 All Kerala Bus Timings
 
-A single-page, open-source web app to quickly check Kerala bus timings by district and bus stand.  
-Data is stored as Markdown files (no database). The app fetches and renders those Markdown tables.
+A community-driven project to document and share bus stand timings across Kerala.  
+The goal is to make reliable public transport timings accessible to everyone, especially students, workers, and travelers.
 
-- Framework: Next.js (App Router), mobile-first UI
-- Data: public/data/{district}/{stand}.md
-- Rendering: React Markdown with GFM tables
-- Search flow: Select district → search/select bus stand → timings render below
+🌐 Live app: [All Kerala Bus Timings](https://allkeralabustimings.vercel.app)  
+📱 Installable as a **Progressive Web App (PWA)** for offline access and native-like experience.
 
-## Quick Start
+---
 
-1. Add or edit Markdown files under `public/data`. Example:
-   - `public/data/idukki/checkpost.md`
-   - `public/data/kozhikode/nit.md`
+## ✨ Features
 
-2. Rebuild the manifest:
-   - Preferred: run the script `scripts/generate-manifest.ts` (v0 supports running scripts directly)
-   - Or manually update `public/data/manifest.json`
+- Browse bus stand timings across Kerala
+- Installable **PWA** – works offline and can be added to your home screen
+- Simple, mobile-friendly interface
+- Easy `.md` file generator for new data
+- Community contributions for accuracy and coverage
 
-3. Preview/Publish from the v0 UI. No backend required.
+---
 
-## Folder Structure
+## 🚀 Quick Start (Developers)
 
-\`\`\`
-public/
-  data/
-    idukki/
-      checkpost.md
-    kozhikode/
-      nit.md
-    pathanamthitta/
-      athikayam.md
-    manifest.json   <-- generated file used by the UI
-scripts/
-  generate-manifest.ts
-\`\`\`
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/allkeralabustiming-app.git
+cd allkeralabustiming-app
 
-## Markdown Guidelines
+# Install dependencies
+npm install
 
-- Use standard GitHub-Flavored Markdown (GFM) tables.
-- Example:
+# Run locally
+npm run dev
+```
 
-\`\`\`markdown
-# {Bus Stand Name} Bus Timings
+Your app will be running at `http://localhost:3000`.
 
-## {Route Title}
-| Time     | Bus            |
-|----------|----------------|
-| 06:00 AM | KSRTC          |
-| 06:30 AM | Example Bus    |
-\`\`\`
+---
 
-See `CONTRIBUTING.md` for detailed steps.
+## 📖 How It Works
 
-## Tech Notes
+- Each bus stand has a **Markdown (.md) file** containing its timings.
+- The app reads these `.md` files and displays them in a clean UI.
+- Anyone can contribute by adding or updating bus stand data.
 
-- UI uses shadcn/ui components included with the starter.
-- Data fetching uses SWR (client-side) and static assets from `public/data`.
-- Dependencies like `react-markdown` and `remark-gfm` are inferred automatically in the v0 environment.
+👉 Use the built-in `.md` generator tool:  
+[Bus Stand Generator](https://allkeralabustimings.vercel.app/generator)
 
-## License
+---
 
-MIT — Contributions welcome!
+## 🤝 Contributing
+
+We welcome contributions from the community! 🎉
+
+If you’d like to add or update bus stand timings:
+
+- Please check out our detailed [Contributing Guide](./CONTRIBUTING.md).
+- Issues can be opened for **new bus stands** or **updates to existing timings**.
+- Whenever possible, attach a clear **photo of the official bus timings board** to make validation easier.
+
+---
+
+## 📸 Example
+
+If available, attach a photo like this when creating an issue:
+
+[Sample Bus Stand Timings](https://drive.google.com/file/d/1-mFF3SPDUwafiV5MHPr6YjiYgrmT_M_t/view?usp=sharing)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js** – frontend framework
+- **Tailwind CSS** – styling
+- **Markdown** – data storage for bus timings
+- **PWA** – offline access & home-screen installation
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](./LICENSE).
